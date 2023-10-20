@@ -2,26 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.theme-navbarRoutes{
+    @apply  text-black  bg-gray-50 dark:bg-neutral-950 dark:text-white dark:border-none
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+body{ 
+    @apply  transition-all  dark:bg-black dark:text-white dark:border-[#252626]
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.themes{
+    /* @apply dark:bg-gray-950 */
+    @apply dark:bg-[#0e0d0de9]
+}
+.text-themes{
+    @apply dark:text-white 
+}
+.themes-table-head{
+    @apply dark:bg-neutral-900
+}
+.themes-table-body{
+    @apply dark:bg-neutral-950
+}
+h1,h2,h3,h4,h5,h6{
+    @apply text-themes
+}
+.table-hover-row{
+    @apply dark:hover:bg-[#ffffff1c] hover:bg-[#dcdbdb95]
+}
+::-webkit-input-placeholder{
+    @apply dark:text-white transition-all
 }
