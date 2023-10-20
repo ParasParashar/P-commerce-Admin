@@ -7,7 +7,7 @@ const page = async () => {
     return (
       <div className="flex items-center justify-center h-screen">
         <h2 className="text-themes text-3xl text-center">
-          Currently, you don't have any orders.
+          Currently, you not have any orders.
         </h2>
       </div>
     );

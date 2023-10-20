@@ -88,7 +88,7 @@ const PropertyCreation = ({ initialData }: propsType) => {
   return (
     <div className="mt-6 themes border bg-slate-100 rounded-md p-4">
       <div className="font-medium items-center flex justify-between">
-       Create Product Properties
+        Create Product Properties
       </div>
 
       <>
@@ -115,6 +115,7 @@ const PropertyCreation = ({ initialData }: propsType) => {
                     <SelectContent>
                       {initialData.map((data) => (
                         <SelectItem
+                          key={data.id}
                           aria-required
                           disabled={isSubmitting}
                           value={data.id}
@@ -167,7 +168,8 @@ const PropertyCreation = ({ initialData }: propsType) => {
                       }
                     />
                     <span className="text-xs text-center text-fuchsia-700">
-                      You can add multiple values at the same time & use " , " to add multiple value at the same time.
+                      You can add multiple values at the same time & use
+                      &#39;,&#39; to add multiple value at the same time.
                     </span>
                   </div>
                   <Button

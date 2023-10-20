@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation"; // Changed to next/router
 import { Product } from "@prisma/client";
 import ImageUploadProvider from "../providers/ImageUploadProvider";
 import { ReactSortable } from "react-sortablejs";
+import Image from "next/image";
 interface ImageFormProps {
   productId: string;
   initialData: Product;
@@ -100,9 +101,10 @@ const ImageForm: React.FC<ImageFormProps> = ({ initialData, productId }) => {
           >
             {sortedImages.map((image, index) => (
               <div key={index} className="relative w-32 h-32">
-                <img
+                <Image
                   src={image}
                   alt={`Product Image ${index}`}
+                  fill
                   className="object-cover w-full h-full rounded-md"
                   style={{ cursor: "grab" }}
                 />

@@ -94,7 +94,7 @@ const CategoryCreation = ({ initialData }: propsType) => {
                     <SelectContent>
                       
                     {initialData.map((data)=>(
-                        <SelectItem value={data.id}>
+                        <SelectItem key={data.id} value={data.id}>
                         {data.name}
                       </SelectItem>
                     ))}

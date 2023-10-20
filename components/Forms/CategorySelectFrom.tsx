@@ -112,7 +112,7 @@ const CategorySelectForm = ({ productId, category }: props) => {
                   </FormControl>
                   <SelectContent>
                     {category.map((data) => (
-                      <SelectItem value={data.id}>{data.name}</SelectItem>
+                      <SelectItem key={data.id} value={data.id}>{data.name}</SelectItem>
                     ))}
                   </SelectContent>
                 </Select>

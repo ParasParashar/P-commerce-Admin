@@ -21,17 +21,16 @@ type propertyType = {
 };
 const CustomPropertyForm = ({ productId, initialData }: props) => {
   const router = useRouter();
-    useEffect(() => {
-      if(initialData.properties.length > 0){
-
-        setProperties(
-          initialData?.properties.map((data) => ({
-            name: data.name,
-            value: data.value.join(' '),
-          }))
-          );
-        }
-      }, [initialData.properties]);
+  useEffect(() => {
+    if (initialData.properties.length > 0) {
+      setProperties(
+        initialData?.properties.map((data) => ({
+          name: data.name,
+          value: data.value.join(" "),
+        }))
+      );
+    }
+  }, [initialData.properties]);
   const [isEditing, setIsEditing] = useState(false);
   const toggleEdit = () => {
     setIsEditing(!isEditing);
@@ -89,7 +88,7 @@ const CustomPropertyForm = ({ productId, initialData }: props) => {
   return (
     <div className="mt-6 themes border bg-slate-100 rounded-md p-4">
       <div className="font-medium items-center flex justify-between">
-        Custom Product Properties
+        Custom Product Properties or Product Varaint
         <Button variant={"ghost"} onClick={toggleEdit}>
           {isEditing ? (
             <>Cancel</>
@@ -135,8 +134,8 @@ const CustomPropertyForm = ({ productId, initialData }: props) => {
                   />
                 </div>
                 <span className="text-xs text-center text-fuchsia-700">
-                  You can add multiple values at the same time & use " , " to
-                  add multiple value at the same time.
+                  You can add multiple values at the same time & use &#39; ,
+                  &#39; to add multiple value at the same time.
                 </span>
                 <Button
                   className="ml-auto flex gap-2 items-center"
@@ -154,17 +153,18 @@ const CustomPropertyForm = ({ productId, initialData }: props) => {
         </div>
       ) : (
         <div>
-        {initialData.properties.map((data, index) => (
-          <div key={index} className="flex items-center mb-2">
-            <p className="mr-2 text-lg font-semibold">{data.name}:</p>
-            <p className="text-gray-700">{data.value.join(', ')}</p>
-          </div>
-        ))}
-        {initialData.properties.length === 0 && (
-          <p className="text-sm mt-2 italic font-semibold">Create custom Properties</p>
-        )}
-      </div>
-      
+          {initialData.properties.map((data, index) => (
+            <div key={index} className="flex items-center mb-2">
+              <p className="mr-2 text-lg font-semibold">{data.name}:</p>
+              <p className="text-gray-700">{data.value.join(", ")}</p>
+            </div>
+          ))}
+          {initialData.properties.length === 0 && (
+            <p className="text-sm mt-2 italic font-semibold">
+              Create custom Properties
+            </p>
+          )}
+        </div>
       )}
     </div>
   );

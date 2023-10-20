@@ -11,9 +11,9 @@ export default async function Page() {
     return (
       <div className="h-[45vh] gap-3  w-full text-center flex flex-col items-center justify-center">
         <h2 className="text-xl font-bold">
-          Currently, you don't have any product.
+          Currently, you not have any product.
         </h2>
-        <p className="text-lg text-fuchsia-600">Let's Create Some</p>
+        <p className="text-lg text-fuchsia-600">Let&#39; Create Some</p>
         <CreateProduct>
           <Button
             variant="outline"

@@ -69,7 +69,7 @@ const FeaturedProductDescriptionForm = ({ initialData, productId }: propsType) =
         {initialData?initialData :(
             <div className="text-center mr-0">
             <p className="italic">Create featured Description</p>
-            <p className="text-xs text-fuchsia-600">After creating featured description It's automatically convert's to featurd collection.</p>
+            <p className="text-xs text-fuchsia-600">After creating featured description It&#39;s automatically convert&#39; to featurd collection.</p>
             </div>
         )}
         </p>}
